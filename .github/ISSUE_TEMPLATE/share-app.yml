@@ -1,0 +1,101 @@
+name: Share your app
+description: Put something you built with AI on vibecodingfaces.com
+title: "[App] "
+labels: ["app"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in and press **Create**. Your app shows up on [vibecodingfaces.com](https://vibecodingfaces.com) in a few minutes, next to your GitHub picture.
+
+        ❤️ and 👍 on this post are your app's likes, and the comments here are its community. Edit this post to change your app; close it to take your app down.
+  - type: input
+    id: name
+    attributes:
+      label: App name
+      placeholder: Pixel Pond
+    validations:
+      required: true
+  - type: input
+    id: tagline
+    attributes:
+      label: One line about it
+      description: What does it do?
+      placeholder: Feed pixel fish and grow a pond.
+    validations:
+      required: true
+  - type: input
+    id: git
+    attributes:
+      label: Git link
+      description: Where the code lives (GitHub, GitLab, Codeberg…). A GitHub repo also shows its README and stars. Add a git link, a live link, or both.
+      placeholder: https://github.com/you/your-app
+  - type: input
+    id: live
+    attributes:
+      label: Live link
+      description: Where people can try it, if it's online.
+      placeholder: https://your-app.com
+  - type: dropdown
+    id: category
+    attributes:
+      label: What is it?
+      options:
+        - Web app
+        - Game
+        - Tool
+        - AI app
+        - Mobile app
+        - Desktop app
+        - Command line
+        - Browser extension
+        - Bot
+        - Website
+        - Library or API
+        - Art & music
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: built
+    attributes:
+      label: Built with
+      description: Pick all you used.
+      multiple: true
+      options:
+        - Claude Code
+        - Claude
+        - Cursor
+        - Codex
+        - ChatGPT
+        - GitHub Copilot
+        - Windsurf
+        - Lovable
+        - Bolt
+        - v0
+        - Replit
+        - Gemini
+        - Something else
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: Up to 6, separated by commas.
+      placeholder: pixel-art, fish, relaxing
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image in here.
+  - type: textarea
+    id: story
+    attributes:
+      label: About it
+      description: "Optional: how you made it, what you asked the AI, what surprised you. Markdown works."
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Ground rules
+      options:
+        - label: I made this (with as much AI help as I liked), and the links are safe to open.
+          required: true
